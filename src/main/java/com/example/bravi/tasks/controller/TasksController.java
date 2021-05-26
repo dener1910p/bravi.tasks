@@ -44,7 +44,7 @@ public class TasksController {
 			taskList = new ArrayList<Tasks>();
 			taskRepository.findByTask(taskTitle).forEach(taskList::add);
 			if (taskList.isEmpty()) {
-				message = "The task could not be found with name: " + taskTitle;
+				message = "The task could not be found with title: " + taskTitle;
 			}
 			return new ResponseEntity<>(taskList, HttpStatus.OK);
 		} catch (Exception e) {
