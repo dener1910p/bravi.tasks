@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "02c89b0c-3967-458a-9c77-d94f7e5f8fab",
+		"name": "Crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getByTaskTitle",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskByTask?task=lavar carro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskByTask"
+					],
+					"query": [
+						{
+							"key": "task",
+							"value": "lavar carro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"task\":\"Pet Shop\",\r\n        \"comments\":\"testando tasks\",\r\n        \"dtcreation\":\"2021-05-25\",\r\n        \"dtexecution\":\"2021-05-27\",       \r\n        \"status\":\"open\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/task?task=lavar carro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task"
+					],
+					"query": [
+						{
+							"key": "task",
+							"value": "lavar carro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"task\":\"Pet Shop\",\r\n        \"comments\":\"tasks\",\r\n        \"dtcreation\":\"2021-05-25\",\r\n        \"dtexecution\":\"2021-05-27\",\r\n        \"dtfinalization\":\"2021-05-27\",\r\n        \"status\":\"close\",\r\n        \"spendedtime\": \"2h45min\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/taskUpdate?task=Pet Shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskUpdate"
+					],
+					"query": [
+						{
+							"key": "task",
+							"value": "Pet Shop"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
