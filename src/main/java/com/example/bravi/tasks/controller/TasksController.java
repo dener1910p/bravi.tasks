@@ -52,7 +52,6 @@ public class TasksController {
 		}
 	}
 
-	
 	// Create new task
 	@PostMapping("/task")
 	public void createTask(@RequestBody Tasks tasks) {
