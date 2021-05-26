@@ -80,7 +80,6 @@ public class TasksController {
 		try {
 			if (task.isEmpty()) {
 				message = "Task not found!";
-
 			} else if (taskUpdate.getStatus().equals("close")) {
 				message = "This task is already finalized!";
 			} else {
