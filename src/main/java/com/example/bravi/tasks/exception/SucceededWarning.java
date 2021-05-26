@@ -1,4 +1,4 @@
-package com.example.inatel.stock.exception;
+package com.example.bravi.tasks.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

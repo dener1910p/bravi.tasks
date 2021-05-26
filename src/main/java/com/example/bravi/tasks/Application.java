@@ -1,4 +1,4 @@
-package com.example.inatel.stock;
+package com.example.bravi.tasks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
